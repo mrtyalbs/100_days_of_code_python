@@ -3,8 +3,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time
 
-user_email = "muratalbas@outlook.com"
-user_password = "myabercem__2323"
+user_email = "usermail@outlook.com"
+user_password = "1122323"
 
 service = Service("./chromedriver.exe")
 options = webdriver.ChromeOptions()
