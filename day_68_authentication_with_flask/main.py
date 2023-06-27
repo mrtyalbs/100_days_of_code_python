@@ -74,16 +74,20 @@ def login():
 
 
 @app.route('/secrets/<name>')
+@login_required
 def secrets(name):
     return render_template("secrets.html", name=name)
 
 
 @app.route('/logout')
+@login_required
 def logout():
-    pass
+    logout_user()
+    return redirect(url_for("home"))
 
 
 @app.route('/download')
+@login_required
 def download():
     return send_from_directory(directory="static", path="files/cheat_sheet.pdf")
 
